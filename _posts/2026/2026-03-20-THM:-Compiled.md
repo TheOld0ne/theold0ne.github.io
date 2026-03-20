@@ -6,7 +6,7 @@ author: "TheOldOne"
 categories:
     - blog
 tags:
-    - forensic analysis
+    - forensics analysis
     - ghidra
     
 ---
