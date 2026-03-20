@@ -9,8 +9,6 @@ categories:
 tags:
     - forensic analysis
     - ghidra
-   
-
 ---
 
 
