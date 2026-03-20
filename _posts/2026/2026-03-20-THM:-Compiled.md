@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:	"THM: Compiled"
@@ -9,6 +8,7 @@ categories:
 tags:
     - forensic analysis
     - ghidra
+    
 ---
 
 
