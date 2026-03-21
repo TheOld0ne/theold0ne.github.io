@@ -13,7 +13,7 @@ tags:
 image: /images/posts/2026/THM/Compiled/compiled1.jpg
 ---
 
-
+([TryHackMe Compiled]([https://tryhackme.com/room/compiled]))  
 Našou úlohou je získať heslo. Dostaneme súbor bez prípony – Compiled. Prvý krok je vždy zistiť o aký typ súboru ide.  
 K tomu použijeme `file`.  
 
