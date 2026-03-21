@@ -23,8 +23,7 @@ Príkaz `strings` extrahuje všetky čitateľné ASCII reťazce z binárky. Je t
 **• Password:**              – program žiada heslo od používateľa  
 **• DoYouEven%sCTF**         – formátovací reťazec so %s – dopĺňa sa niečo dovnútra  
 **• StringsIH a sForNoobH**  – fragmenty... ktoré budú relevantné  
-**• Correct! / Try again!**  – program overuje správnosť vstupu  
-**• zzz.c**                  – pôvodný zdrojový súbor  
+**• Correct! / Try again!**  – program overuje správnosť vstupu   
 **• scanf a strcmp**         – použité funkcie z libc  
 Používame `scanf` na čítanie vstupu a `strcmp` na porovnanie reťazcov – to je typický vzor overovania hesla v C.  
 
