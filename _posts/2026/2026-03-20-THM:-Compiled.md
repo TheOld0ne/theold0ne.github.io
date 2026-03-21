@@ -12,4 +12,6 @@ tags:
 ---
 
 
-clanok v procese
+Našou úlohou je získať heslo. Dostaneme súbor bez prípony – Compiled. Prvý krok je vždy zistiť o aký typ súboru ide.
+K tomu použijeme 'file'
+
