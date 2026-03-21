@@ -20,8 +20,8 @@ K tomu použijeme `file`.
 #### strings – čitateľné reťazce  
 Príkaz `strings` extrahuje všetky čitateľné ASCII reťazce z binárky. Je to najrýchlejší spôsob ako zistiť čo binárka robí bez spustenia.  
 
-<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/strings1.jpg" alt="strings1" style="width:80%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
-<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/string2.jpg" alt="strings2" style="width:80%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
+<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/strings1.jpg" alt="strings1" style="width:60%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
+<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/string2.jpg" alt="strings2" style="width:60%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
 
 Čo vidíme? Niekoľko zaujímavých reťazcov:  
 **• Password:**              – program žiada heslo od používateľa  
@@ -38,12 +38,12 @@ Po importe a analýze nájdeme v Symbol Tree funkciu main a zobrazíme jej dekom
 
 Zaujímavá je časť kódu s funkcoi scanf kde vkladáme heslo. Vidíme že časť hesla je "DoYouEven" a daľšia časť hesla je hodnota premennej %s.  
 
-<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/c1.jpg" alt="scanf" style="width:80%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
+<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/c1.jpg" alt="scanf" style="width:40%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
 
 V kóde vidíme dve porovnávacie funkcie "strcmp" ktorá keď vracia 0 tak je výsledok zhodný.  
 Podľa tohto vidíme že náš reťazec je _init.  
 
-<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/c2.jpg" alt="strcmp" style="width:80%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
+<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/c2.jpg" alt="strcmp" style="width:50%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
 
 Poskladáme heslo a úloha vyriešená.
 
