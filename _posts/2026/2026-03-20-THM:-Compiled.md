@@ -15,7 +15,7 @@ tags:
 Našou úlohou je získať heslo. Dostaneme súbor bez prípony – Compiled. Prvý krok je vždy zistiť o aký typ súboru ide.  
 K tomu použijeme `file`.
 
-<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/file.jpg" alt="dns host" style="width:100%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">
+<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/file.jpg" alt="dns host" style="width:80%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">
 
 #### strings – čitateľné reťazce  
 Príkaz `strings` extrahuje všetky čitateľné ASCII reťazce z binárky. Je to najrýchlejší spôsob ako zistiť čo binárka robí bez spustenia.
