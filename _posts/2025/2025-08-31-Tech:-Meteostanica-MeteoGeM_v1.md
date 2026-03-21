@@ -23,12 +23,12 @@ image: /images/posts/2025/meteo/meteo1.jpg
 
 ### Ako som postavil vlastnú batériovú meteostanicu s ESP8266 a MQTT
 
-Už dlho ma lákala myšlienka mať prehľad o tom, aká je teplota a vlhkosť nielen v byte, ale aj vonku. Chcel som si to ale riešiť po svojom žiadne hotové IoT hračky ale vlastný projekt ktorý si sám zladím a prispôsobím.  
+Už dlho ma lákala myšlienka mať prehľad o tom aká je teplota a vlhkosť nielen v byte ale aj vonku. Chcel som si to ale riešiť po svojom žiadne hotové IoT hračky ale vlastný projekt ktorý si sám zladím a prispôsobím.  
 A tak sa zrodil nápad na dvojicu meteostaníc: jednu do bytu a druhú von s tým že obidve budú napájané z batérie a čo najviac úsporné.
 
 #### Nápad a požiadavky
 
-**Moje požiadavky boli jasné:**  
+**Moje požiadavky boli:**  
 1. Meranie teploty, vlhkosti a tlaku každých 15 minút.  
 2. Odosielanie dát na NAS cez MQTT aby som ich mohol ďalej spracovávať.  
 3. Zariadenia musia byť úplne autonómne a napájané z Li-Ion batérií.  
@@ -40,9 +40,9 @@ A tak sa zrodil nápad na dvojicu meteostaníc: jednu do bytu a druhú von s tý
 #### Výber komponentov
 
 **Po chvíľke premýšľania som skončil pri týchto súčiastkach:**  
-**ESP8266** – lacný WiFi mikrokontrolér ktorý bez problémov zvládne MQTT.  
+**ESP8266** – lacný WiFi mikrokontrolér.  
 **BME280** – senzor na teplotu, vlhkosť a tlak. Malý, presný a komunikuje cez I²C.  
-**TPL5110** – „super power timer“ od Texas Instruments, ktorý dokáže úplne odpojiť napájanie a prebudiť zariadenie v zadanom intervale.  
+**TPL5110** – „super power timer“ od Texas Instruments ktorý dokáže úplne odpojiť napájanie a prebudiť zariadenie v zadanom intervale.  
 **Pololu U1V11F3** – DC/DC menič na stabilné 3,3V pre ESP. Regulátor zvyšuje napätie v rozsahu od 0,5 do 5,5 V na konštantnú hodnotu 3,3 V.  
 **2× Li-Ion 18650** – zdroj energie.
 
@@ -55,12 +55,12 @@ A tak sa zrodil nápad na dvojicu meteostaníc: jednu do bytu a druhú von s tý
 
 Samozrejme s pomocou AI som napísal jednoduchý kód v Arduine ([code MeteoGeM_v1](https://github.com/0x00mg/C-language/tree/main/MeteoGeM)). Funguje to takto:  
 1. Po zapnutí sa ESP pripojí na WiFi.  
-2. Inicializuje BME280, ak ho nenájde, reštartuje sa.  
+2. Inicializuje BME280 ak ho nenájde reštartuje sa.  
 3. Získa aktuálny čas z NTP a prevedie ho na lokálny (vrátane letného/zimného času).  
 4. Pripojí sa na MQTT broker (bežiaci na NAS).  
 5. Zmeria teplotu, vlhkosť, tlak a napätie batérie.  
 6. Všetko odošle na príslušné MQTT topicy.  
-7. Vysiela DONE signál pre TPL5110 a čaká, kým sa zariadenie úplne vypne.  
+7. Vysiela DONE signál pre TPL5110 a čaká kým sa zariadenie úplne vypne.  
 8. Ak sa čokoľvek pokazí (WiFi, MQTT, senzor), ESP sa jednoducho reštartuje a skúsi to znova.  
 
 **TPL5110** – malý čip, veľká záchrana batérie  
@@ -84,8 +84,8 @@ Na NAS-e som si nastavil MQTT server a vizualizáciu dát. Teraz môžem sledova
 
 #### Testovanie a vyhodnotenie spotreby meteostanice
 
-Po dokončení hardvéru bolo potrebné otestovať spotrebu a odhadnúť, ako dlho dokáže meteostanica fungovať na batérie.  
-Cieľ bol jasný – zistiť, či 2× Li-Ion 18650 (2200 mAh, paralelne = 4400 mAh) vydržia aspoň niekoľko mesiacov pri intervale odosielania dát každých 15 minút.
+Po dokončení hardvéru bolo potrebné otestovať spotrebu a odhadnúť ako dlho dokáže meteostanica fungovať na batérie.  
+Cieľ bol jasný – zistiť či 2× Li-Ion 18650 (2200 mAh, paralelne = 4400 mAh) vydržia aspoň niekoľko mesiacov pri intervale odosielania dát každých 15 minút.
 
 #### Spotreba jednotlivých komponentov
 
@@ -98,7 +98,7 @@ Cieľ bol jasný – zistiť, či 2× Li-Ion 18650 (2200 mAh, paralelne = 4400 m
 
    &nbsp;
 **Poznámka:**  
-Počas „spánku“ je WeMos fyzicky odpojený od napájania pomocou TPL5110, takže spotreba v neaktívnej fáze je prakticky nulová.  
+Počas „spánku“ je WeMos fyzicky odpojený od napájania pomocou TPL5110 takže spotreba v neaktívnej fáze je prakticky nulová.  
 Hlavnú časť dennej spotreby teda tvorí krátka aktívna fáza každých 15 minút.
 
 #### Výpočet spotreby a odhad výdrže batérie
