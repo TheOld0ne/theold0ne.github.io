@@ -9,7 +9,8 @@ tags:
     - forensics analysis
     - ghidra
     - purple
-    
+
+image: /images/posts/2026/HTB/Compiled/compiled.jpg
 ---
 
 
