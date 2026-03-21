@@ -10,7 +10,7 @@ tags:
     - ghidra
     - purple
 
-image: /images/posts/2026/HTB/Compiled/compiled.jpg
+image: /images/posts/2026/HTB/Compiled/c2.jpg
 ---
 
 
