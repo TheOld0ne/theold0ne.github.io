@@ -43,7 +43,7 @@ Zaujímavá je časť kódu s funkcoi scanf kde vkladáme heslo. Vidíme že ča
 V kóde vidíme dve porovnávacie funkcie "strcmp" ktorá keď vracia 0 tak je výsledok zhodný.  
 Podľa tohto vidíme že náš reťazec je _init.  
 
-<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/c2.jpg" alt="strcmp" style="width:50%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
+<img src="{{ site.baseurl }}/images/posts/2026/THM/Compiled/c2.jpg" alt="strcmp" style="width:60%; max-width:700px; height:auto; margin-bottom:20px; border-radius:4px;">  
 
 Poskladáme heslo a úloha vyriešená.
 
