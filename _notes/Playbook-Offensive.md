@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "Playbook - Offensive"
+title: "Offensive Playbook - Penetration"
 folder: "Playbooks"
 tags: [playbook, offensive, recon, privesc, post-exploitation, web]
 ---
