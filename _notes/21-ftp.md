@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "21-FTP"
+title: "FTP (Port 21)"
 folder: "Ports"
 tags: [ftp, enumeration, bruteforce, ctf, pentesting]
 description: "FTP cheatsheet – enumeration, anonymous login, bruteforce, vsftpd backdoor a ďalšie techniky."
