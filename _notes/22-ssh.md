@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "SSH"
+title: "SSH (Port 22)"
 folder: "Ports"
 tags: [ssh, port-22, enumeration, bruteforce, tunneling]
 ---
