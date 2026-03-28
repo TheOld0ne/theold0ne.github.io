@@ -135,3 +135,56 @@ a.reserved:hover {
 }
 
 
+
+/* --- Notes zoznam s priečinkami --- */
+.notes-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+.notes-list > li {
+  margin: 4px 0;
+}
+
+.notes-list > li > a {
+  color: rgba(220,220,0,0.8);
+}
+
+.notes-list > li > a:hover {
+  color: rgba(220,220,0,0.6);
+}
+
+.notes-folder {
+  margin-top: 10px;
+}
+
+.notes-folder-name {
+  color: rgba(255,255,255,0.75);
+  font-weight: bold;
+}
+
+.notes-subitems {
+  list-style: none;
+  padding-left: 20px;
+  margin: 2px 0 6px 0;
+  border-left: 1px dashed rgba(255,255,255,0.2);
+}
+
+.notes-subitems li {
+  margin: 3px 0;
+}
+
+.notes-subitems li::before {
+  content: "└ ";
+  color: rgba(255,255,255,0.3);
+}
+
+.notes-subitems li a {
+  color: rgba(220,220,0,0.8);
+}
+
+.notes-subitems li a:hover {
+  color: rgba(220,220,0,0.6);
+}
