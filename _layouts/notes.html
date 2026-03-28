@@ -1,14 +1,23 @@
 ---
 layout: page
+title: "Notes"
+permalink: /notes/
 ---
 
-<div class="post">
+{% assign grouped = site.notes | group_by: "folder" %}
 
-
-
-  <article class="post-content">
-  {{ content }}
-  </article>
+{% for group in grouped %}
+  {% if group.name != "" %}
+- **{{ group.name }}**
+    {% for note in group.items %}
+  - [{{ note.title }}]({{ note.url }})
+    {% endfor %}
+  {% else %}
+    {% for note in group.items %}
+- [{{ note.title }}]({{ note.url }})
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 
 	<p class="feed-recomendation">
 		Páčil sa vám príspevok? Prihláste sa na <a href="{{ site.baseurl }}feed/">odber</a>!! (V procese...)
