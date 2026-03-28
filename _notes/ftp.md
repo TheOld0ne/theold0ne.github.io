@@ -1,6 +1,7 @@
 ---
 layout: notes
 title: "FTP"
+folder: "Ports"
 ---
 
 
