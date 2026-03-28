@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: notes
 title: "Wireshark – Cheatsheet (CTF & Forensics)"
 date: 2025-03-28
 categories: [cheatsheet, networking, ctf, forensics]
